@@ -1,0 +1,535 @@
+[build]
+command = "./build.sh"
+publish = "public"
+
+[context.production.environment]
+HUGO_ENABLEGITINFO = "true"
+HUGO_ENV = "production"
+HUGO_VERSION = "0.108.0"
+GO_VERSION = "1.19.3"
+
+[context.split1.environment]
+HUGO_ENV = "production"
+HUGO_VERSION = "0.108.0"
+GO_VERSION = "1.19.3"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.108.0"
+GO_VERSION = "1.19.3"
+
+[context.branch-deploy.environment]
+HUGO_VERSION = "0.108.0"
+GO_VERSION = "1.19.3"
+
+[context.next.environment]
+HUGO_ENABLEGITINFO = "true"
+
+[[redirects]]
+force = true
+from = "/latest/installation/installation/*"
+to = "/docs/installation/"
+
+[[redirects]]
+force = true
+from = "/latest/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.2.1/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.3.0/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.4.0/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.5.0/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.6.0/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.6.1/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.7.0/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.7.1/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.7.2/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.8.0/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.9.0/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.9.1/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.9.2/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.10.0/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.11.0/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/0.12.0/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/1.0-rc1/*"
+to = "/docs/:splat"
+
+[[redirects]]
+force = true
+from = "/installation/installation"
+to = "/docs/installation"
+
+[[redirects]]
+force = true
+from = "/docs/usage/developer-workflow/*"
+to = "/docs/spec/:splat"
+
+[[redirects]]
+force = true
+from = "/concepts/*"
+to = "/docs/concepts/:splat"
+
+[[redirects]]
+force = true
+from = "/contributing/*"
+to = "/docs/contributing/:splat"
+
+[[redirects]]
+force = true
+from = "/installation/*"
+to = "/docs/installation/:splat"
+
+[[redirects]]
+force = true
+from = "/languages/*"
+to = "/docs/languages/:splat"
+
+[[redirects]]
+force = true
+from = "/releases/*"
+to = "/docs/releases/:splat"
+
+[[redirects]]
+force = true
+from = "/trouble-shooting/*"
+to = "/docs/installation/trouble-shooting/:splat"
+
+[[redirects]]
+force = true
+from = "/tutorial/*"
+to = "/docs/usage/:splat"
+
+[[redirects]]
+force = true
+from = "/docs/usage/kafka-trigger-tutorial/*"
+to = "/docs/triggers/message-queue-trigger/kafka/:splat"
+
+[[redirects]]
+force = true
+from = "/docs/usage/ingress-tutorial/*"
+to = "/docs/usage/ingress/:splat"
+
+[[redirects]]
+force = true
+from = "/usage/*"
+to = "/docs/usage/:splat"
+
+[[redirects]]
+force = true
+from = "/docs/message-queuing/*"
+to = "/docs/triggers/message-queue-trigger/:splat"
+
+[[redirects]]
+force = true
+from = "/docs/usage/trigger/*"
+to = "/docs/triggers/:splat"
+
+[[redirects]]
+force = true
+from = "/community"
+to = "/"
+
+[[redirects]]
+force = true
+from = "/features"
+to = "/"
+
+[[redirects]]
+force = true
+from = "/posts"
+to = "/blog"
+
+[[redirects]]
+force = true
+from = "/posts/*"
+to = "/blog/:splat"
+
+[[redirects]]
+force = true
+from = "/workflows"
+to = "/"
+
+[[redirects]]
+force = true
+from = "/workflows/*"
+to = "/"
+
+[[redirects]]
+force = true
+from = "/slack"
+to = "https://join.slack.com/t/fissionio/shared_invite/enQtOTI3NjgyMjE5NzE3LTllODJiODBmYTBiYWUwMWQxZWRhNDhiZDMyN2EyNjAzMTFiYjE2Nzc1NzE0MTU4ZTg2MzVjMDQ1NWY3MGJhZmE"
+
+[[redirects]]
+force = true
+from = "/categories/busting/"
+to = "/categories/"
+
+[[redirects]]
+force = true
+from = "/categories/testing/"
+to = "/categories/"
+
+[[redirects]]
+force = true
+from = "/docs/crd-reference/"
+to = "/docs/reference/crd-reference/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/docs/fission-cli/"
+to = "/docs/reference/fission-cli/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/docs/fission-cli/*"
+to = "/docs/reference/fission-cli/:splat"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/canary"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/chrome"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/community"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/confluent"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/database"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/dev-workflow"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/event-driven"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/github-action"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/go"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/go-function"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/gobuster"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/grafana"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/gvisor"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/headless"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/ingress"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/iot"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/jaeger"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/java"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/jvm"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/kafka"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/keda"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/loki"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/monitoring"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/nats"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/nextjs"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/observability"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/opentracing"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/podspec"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/prometheus"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/puppeteer"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/python"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/redis"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/security"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/sidecar"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/tls"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/tolerations"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/tutorial"
+to = "/categories/tutorials"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/website-testing"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/websocket"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/categories/workflow"
+to = "/categories/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/blog/how-to-develop-a-serverless-application-with-fission-part-1/"
+to = "/blog/guestbook-application-with-fission-and-cockroachdb/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/blog/how-to-develop-a-serverless-application-with-fission-part-2/"
+to = "/blog/guestbook-application-with-fission-and-cockroachdb/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/blog/how-to-develop-a-serverless-application-with-fission-part-3/"
+to = "/blog/guestbook-application-with-fission-and-cockroachdb/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/docs/releases/v1.17.0-rc1/"
+to = "/docs/releases/v1.17.0/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/docs/releases/v1.18.0-rc2/"
+to = "/docs/releases/v1.18.0/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/docs/releases/v1.19.0-rc1/"
+to = "/docs/releases/v1.19.0/"
+status = 301
+
+[[redirects]]
+force = true
+from = "/enterprise/"
+to = "/support/"
+status = 301

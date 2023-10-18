@@ -1,0 +1,9 @@
+node_modules
+resources/_gen
+.DS_Store
+.idea
+*.~?~
+*.~??~
+public/
+ebug/
+.hugo_build.lock
