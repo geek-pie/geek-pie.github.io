@@ -1,27 +1,14 @@
-# Copyright 2018 Google LLC All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
 
-baseURL = "https://fission.io/"
+baseURL = "https://whatstack.tech/"
 enableRobotsTXT = true
-title = "Fission"
+title = "whatstack"
 
 # Will give values to .Lastmod etc.
-enableGitInfo = true
+# enableGitInfo = true
 
 # Language settings
-contentDir = "content/en"
-defaultContentLanguage = "en"
+contentDir = "content/cn"
+defaultContentLanguage = "cn"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
@@ -88,17 +75,17 @@ id = ""
 # Language configuration
 
 [languages]
-[languages.en]
+[languages.cn]
 description = "Fast Serverless Functions for Kubernetes"
-languageName = "English"
-title = "Fission"
+languageName = "中文"
+title = "whatstack"
 # Weight used for sorting.
 weight = 1
 
 # Everything below this are Site Params
 
 [params]
-copyright = "Copyright © 2020 Fission Project"
+copyright = "Copyright © 2023 whatstack"
 github_repo = "https://github.com/fission/fission.io"
 github_project_repo = "https://github.com/fission/fission"
 privacy_policy = ""
@@ -209,42 +196,43 @@ changefreq = "monthly"
 filename = "sitemap.xml"
 priority = 0.5
 
+# 菜单
 [menu]
 [[menu.main]]
-name = "Docs"
-url = "/docs/"
+name = "主页"
+url = "/"
 pre = "<i class='fas fa-book'></i>"
 weight = 10
 [[menu.main]]
-name = "Blog"
+name = "文章"
 url = "/blog/"
 pre = "<i class='fas fa-blog'></i>"
-weight = 11
+weight = 20
 [[menu.main]]
-name = "Environments"
-url = "/environments/"
-pre = "<i class='fas fa-store'></i>"
-weight = 12
+# name = "测试"
+# url = "/environments/"
+# pre = "<i class='fas fa-store'></i>"
+# weight = 30
 [[menu.main]]
 name = "Examples"
 url = "/examples/"
 pre = "<i class='fas fa-certificate'></i>"
-weight = 13
+weight = 30
 [[menu.main]]
 name = "GitHub"
 url = "https://github.com/fission"
 pre = "<i class='fab fa-github'></i>"
-weight = 14
+weight = 40
 [[menu.main]]
-name = "Slack"
-url = "/slack"
-pre = "<i class='fab fa-slack'></i>"
-weight = 15
+# name = "Slack"
+# url = "/slack"
+# pre = "<i class='fab fa-slack'></i>"
+# weight = 15
 [[menu.main]]
-name = "Support"
+name = "支持"
 url = "/support/"
 pre = "<i class='fas fa-briefcase'></i>"
-weight = 16
+weight = 50
 
 [module]
 proxy = "direct"

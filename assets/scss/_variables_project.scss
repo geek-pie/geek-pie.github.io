@@ -37,11 +37,26 @@ ul, ol {
   color: black !important
 }
 
+#main_navbar{
+  margin-left: 50px !important;
+}
+.d-lg-block{
+  margin-left: auto !important;
+}
+
+.ml-md-auto{
+  margin-left: 0 !important;
+}
+
 .navbar-bg-onscroll {
   box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
   #docsy-top {
       display: block !important;
   }
+}
+
+.navbar{
+  height: 60px;
 }
 
 .control-bar {
@@ -741,4 +756,23 @@ a {
 
 .DocSearch-Hit-content-wrapper {
 	overflow-y: hidden;
+}
+
+.hero-desc{
+  margin-top: 20px;
+}
+.whats-new{
+  background: none;
+}
+.whats-new .section-title{
+  color: #000;
+}
+
+.container-fluid footer{
+  min-height: 70px;
+  padding-top: 15px !important;
+  // padding-bottom: 40px !important;
+}
+footer .list-inline{
+ padding-top: 8px;
 }
