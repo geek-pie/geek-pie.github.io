@@ -1,0 +1,26 @@
+
+{{ $page := . }}
+{{ $params := $page.Params }}
+<div class="hero">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xl-7 col-lg-6 col-md-6 hero-section-mobile">
+                <h1 class="hero-title">
+                    {{$params.banner.title | markdownify | emojify | safeHTML }}
+                </h1>
+                <h5 class="hero-desc">
+                    {{$params.banner.description | markdownify | emojify | safeHTML }}
+                </h5>
+                <img class="img-fluid hero-banner show-mobile-big" src="{{$params.banner.image}}"
+                    alt-text="Banner" />
+                <br />
+                <a href="{{$params.banner.link.url}}"><button class="hero-big">
+                    {{ $params.banner.link.text | markdownify | emojify | safeHTML }}
+                    </button></a>
+            </div>
+            <div class="col-xl-5 col-lg-6 col-md-6 show-desktop-big">
+                <img class="img-fluid hero-banner" src="/images/fission-illustration.svg" alt-text="Banner" />
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+{{ $page := . }}
+{{ $params := $page.Params }}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 center-text" style="margin-bottom: 40px">
+            <h2 class="section-title">{{$params.books.title}}</h2>
+        </div>
+        {{/* Query */}}
+        {{ $query := where .Site.Pages "Type" "book" }}
+        {{ range $query }}
+        <div class="col-lg-6">
+            <div class="card-shadow">
+                <img class="card-background card-left" src="{{.Params.image}}" />
+                <div class="card-right">
+                    <span class="card-badge">{{.Params.Tag}}</span>
+                    <h4 class="section-text-bold mt-4">
+                        {{ .Title }}
+                    </h4>
+                    <div class="card-shadow-content">
+                        <p class="section-text">
+                            {{ .Description }}
+                        </p>
+                        <a href="{{ .Permalink }}"><button
+                                class="hero-mid align-self-end">{{$params.books.linkText}}</button></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {{ end }}
+    </div>

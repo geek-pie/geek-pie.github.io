@@ -34,11 +34,13 @@ ul, ol {
 }
 
 .navbar-brand {
-  color: black !important
+  color: black !important;
+  margin-left: 40px;
+  
 }
 
 #main_navbar{
-  margin-left: 50px !important;
+  margin-left: 90px !important;
 }
 .d-lg-block{
   margin-left: auto !important;
@@ -281,7 +283,7 @@ input[type="search"]::placeholder {
 .section-text-bold {
   color: #3b3c4c;
   font-weight: 700;
-  margin: 12px 0px;
+  margin: 10px 0px;
   font-size: 18px;
 	line-height: 1.2;
 }
@@ -289,7 +291,7 @@ input[type="search"]::placeholder {
 .section-text {
   color: #5a5b75;
   font-weight: 400;
-  margin: 12px 0px;
+  margin: 10px 0px;
   font-size: 18px;
 }
 
@@ -330,13 +332,22 @@ input[type="search"]::placeholder {
 	margin-bottom: 20px;
 }
 
+.col-lg-6{
+  margin-bottom: 20px;
+}
+
 .card-shadow {
   padding: 35px 30px 30px 30px;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 5px 10px 0 rgba(41,26,204,0.12);
-  border: none;
+  border: 1px solid #1f2a43;
   border-radius: 6px;
-	height: 100%;
+	height: 300px;
+  display: flex;
+}
+
+.card-rirht{
+  margin-left: 10px;
 }
 
 .card-shadow .section-text-bold {
@@ -418,45 +429,37 @@ input[type="search"]::placeholder {
 	background-position: 0 -150px;
 }
 
-.whats-new .card-shadow {
-	height: 100%;
-}
-
 .whats-new .section-title {
   color: white;
   margin-bottom: 5px;
-	margin-top: 4rem
+	margin-top: 4rem;
 }
 
 .whats-new .card-shadow {
   background: white;
-  padding: 25px 15px 15px 15px;
+  padding: 10px;
   min-height: unset;
   box-shadow: 0 5px 10px 0 rgba(41,26,204,0.12);
+  height: 100%;
 }
 
 .whats-new .card-shadow:hover {
 	box-shadow: 5px 10px 30px 0 rgba(41,26,204,0.12);
 }
 
-.whats-new .card-shadow-content {
-  padding: 0px 12px;
-}
 
 .whats-new .card-shadow  button {
 	padding: 12px 22px !important;
 }
 
-@media (min-width: 992px) {
-	.whats-new .card-shadow  .section-text-bold {
-		min-height: 80px;
-	}
+.whats-new .card-shadow  .section-text {
+  height: 50px;
+  display: -webkit-box;   /* 将对象作为弹性伸缩盒子模型显示 */
+  -webkit-box-orient: vertical;   /* 设置或检索伸缩盒对象的子元素的排列方式 */
+  -webkit-line-clamp: 2;  /* 指定几行 */
+  overflow: hidden;  
 
-	.whats-new .card-shadow  .section-text {
-		min-height: 122px;
-	}
 }
-
 .enterprise-company {
   background-color: #93939333;
   transition: .3s background-color ease;
@@ -766,6 +769,7 @@ a {
 }
 .whats-new .section-title{
   color: #000;
+  margin-top: 0;
 }
 
 .container-fluid footer{
@@ -776,9 +780,28 @@ a {
 footer .list-inline{
  padding-top: 8px;
 }
+.DocSearch-Button{
+  margin:0 40px 0 16px !important;
+}
 
 .d-print-none{
   margin-top: 50px;
   border-top: 1px solid #5a5b75;
   padding-top: 10px;
+}
+.card-background{
+  width: 30%;
+  object-fit: cover;
+}
+
+.card-right{
+  width: 70%;
+  padding-left: 20px;
+  padding-top: 10px;
+  // margin-left: 20px;
+  .section-text-bold{
+    margin: 15px 0 0 0 !important;
+    min-height: 0 !important;
+    
+  }
 }
