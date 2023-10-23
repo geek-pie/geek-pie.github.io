@@ -70,7 +70,7 @@ resampleFilter = "CatmullRom"
 [services]
 [services.googleAnalytics]
 # Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
-id = ""
+id = "G-JBYJP9EYZC"
 
 # Language configuration
 
@@ -111,37 +111,14 @@ notoc = true
 # First one is picked as the Twitter card image if not set on page.
 images = ["images/og-image-fission.png"]
 
+disqusShortname = 'whatstack'
+hide_feedback= false
+
 [params.social]
 github = 'fission'
 slackurl = "/slack"
 twitter = 'fissionio'
 
-[[params.whatsnew]]
-badge = 'FISSION DZONE REFCARD'
-body = 'Get started with Serverless on Kubernetes in 5 minutes! Learn how to set up Fission, its key concepts, how to create and invoke a function, monitor its performance, and more.'
-heading = 'New! Download the Fission.io Refcard'
-[params.whatsnew.button]
-hero_class = 'mid'
-text = 'Download Now!'
-url = 'https://platform9.com/wp-content/uploads/2019/03/dzone-refcard-fissionio.pdf'
-
-[[params.whatsnew]]
-badge = 'BLOG'
-body = 'Learn how to use Fission functions with PostgreSQL database.'
-heading = 'Fission Functions with PostgreSQL Sample'
-[params.whatsnew.button]
-hero_class = 'mid-2'
-text = 'Read More'
-url = '/blog/how-to-use-postgresql-database-with-fission-functions/'
-
-[[params.whatsnew]]
-badge = 'BLOG'
-body = 'Tutorial to deploy Next.js applications with Fission.'
-heading = 'Next.js Application with Fission'
-[params.whatsnew.button]
-hero_class = 'mid-2'
-text = 'REad More'
-url = '/blog/serverless-next.js-example-blog-with-fission/'
 
 # User interface configuration
 [params.ui]
@@ -156,14 +133,14 @@ navbar_translucent_over_cover_disable = false
 # Enable to show the side bar menu in its compact state.
 sidebar_menu_compact = true
 # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
-sidebar_search_disable = true
+sidebar_search_disable = false
 
 # Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
 # This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
 # If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
 # add "hide_feedback: true" to the page's front matter.
 [params.ui.feedback]
-enable = false
+enable = true
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
 no = 'Sorry to hear that. Please <a href="https://github.com/fission/fission/issues/new">tell us how we can improve</a>.'
 yes = 'Glad to hear it! Please <a href="https://github.com/fission/fission/issues/new">tell us how we can improve</a>.'
