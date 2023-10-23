@@ -340,7 +340,7 @@ input[type="search"]::placeholder {
   padding: 35px 30px 30px 30px;
   text-align: left;
   box-shadow: 0 5px 10px 0 rgba(41,26,204,0.12);
-  border: 1px solid #1f2a43;
+  border: 1px solid rgba(31, 42, 67,0.1);
   border-radius: 6px;
 	height: 300px;
   display: flex;
@@ -809,3 +809,9 @@ footer .list-inline{
 // .td-footer .row .d-print-none{
 //   --bs-gutter-x:0 !important;
 // }
+.books{
+  margin-top: -550px;
+}
+.wave-bg{
+  margin-top: -60px;
+}

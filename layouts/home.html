@@ -5,6 +5,11 @@
 {{ partial "banner.html" . -}}
 
 <div class="body-container whats-new">
-    {{ partial "docs/list.html" . -}}
- </div>
+    <div class="wave-bg">
+        <img src="/images/wave.webp" />
+    </div>
+    <div class="books">
+        {{ partial "docs/list.html" . -}}
+    </div>
+</div>
 {{ end }}
