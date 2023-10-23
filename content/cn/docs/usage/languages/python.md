@@ -11,7 +11,6 @@ We'll also cover basic troubleshooting.
 ### Before you start
 
 We'll assume you have Fission and Kubernetes setup.
-If not, head over to the [installation guide]({{% ref "../../installation/_index.en.md" %}}).
 
 Verify your Fission setup with:
 
@@ -55,8 +54,6 @@ Hello, world!
 ```
 
 You can also invoke this function by creating an HTTP trigger and making an HTTP request to the Fission router.
-Ensure you have your router's address in the `FISSION_ROUTER` environment variable as [this guide describes]({{% ref "../../installation/env_vars.en.md" %}}#fission-router-address).
-Then,
 
 ```bash
 $ fission route create --method GET --url /hello --function hello 

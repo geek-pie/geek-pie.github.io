@@ -85,6 +85,7 @@ weight = 1
 # Everything below this are Site Params
 
 [params]
+books_directory = "content/cn/docs"
 copyright = "Copyright © 2023 whatstack"
 github_repo = "https://github.com/fission/fission.io"
 github_project_repo = "https://github.com/fission/fission"

@@ -1,0 +1,56 @@
+{{ define "main" }}
+{{ $page := . }}
+{{ $params := $page.Params }}
+<div class="hero">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xl-7 col-lg-6 col-md-6 hero-section-mobile">
+                <h1 class="hero-title">
+                    {{ $params.title }}
+                </h1>
+                <h5 class="hero-desc">
+                    一个致力于专业技术课程和博客的协作与分平台。我们的特色服务包括：专业技术课程、精彩博客文章、社区互动
+                </h5>
+                <img class="img-fluid hero-banner show-mobile-big" src="/images/fission-illustration.svg"
+                    alt-text="Banner" />
+                <br />
+                <a href="/books/"><button class="hero-big">
+                        <img src="/images/github-icon.png" width="22px" style="margin-right: 12px" />选择书籍
+                    </button></a>
+            </div>
+            <div class="col-xl-5 col-lg-6 col-md-6 show-desktop-big">
+                <img class="img-fluid hero-banner" src="/images/fission-illustration.svg" alt-text="Banner" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="body-container">
+</div>
+<div class="body-container whats-new">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 center-text" style="margin-bottom: 40px">
+                <h2 class="section-title">精选书籍</h2>
+            </div>
+            {{/* Query */}}
+            {{ $query := where .Site.Pages "Type" "book" }}
+            {{ range $query }}
+            <div class="col-lg-4">
+                <div class="card-shadow">
+                    <span class="card-badge">{{.Params.Tag}}</span>
+                    <h4 class="section-text-bold mt-4">
+                        {{ .Title }}
+                    </h4>
+                    <div class="card-shadow-content">
+                        <p class="section-text">
+                            {{ .Description }}
+                        </p>
+                        <a href="{{ .Permalink }}"><button class="hero-mid align-self-end">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}

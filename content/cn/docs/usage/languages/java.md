@@ -10,7 +10,6 @@ Current JVM environment is based on openjdk8 and uses Spring Boot as framework.
 ### Before you start
 
 We'll assume you have Fission and Kubernetes setup.
-If not, head over to the [install guide]({{% ref "../../installation/_index.en.md" %}}).
 Verify your Fission setup with:
 
 ``` sh
