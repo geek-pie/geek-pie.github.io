@@ -1,7 +1,51 @@
-# Fission Site Source Repo
+## 如何写书
+1. 在content/cn/docs目录下新建文件夹（如usage），书籍的所有内容都放在该文件夹下。
+2. 在上述文件夹中新建_index.md，格式如下
+```toml
+---
+title: "书名" 
 
-This is the source for the [fission.io](https://fission.io)
-website.
+#固定值，只有在书籍文件夹根目录中的_index.md里才需要
+type: book
+
+#优先级权重，书籍列表排序，越小越靠前
+weight: 1
+
+#书籍自定义分类标签，如"NodeJS" "Java" "大数据" 等热门标签,在书籍列表中展示
+tag: "热门标签"
+
+description: "本书简短的描述内容，在书籍列表中展示"
+---
+ md格式正文内容，如本书的大纲，和详细介绍可放在这里
+
+```
+3. 章节目录组织，可以在e下新建任意子文件夹，用于存放不同的章节内容，同时子文件夹也是可以同样的形式无限嵌套的，用于组织多层目录，当子目录中也新建_index.md文件时，在页面上才能展示出正确的章节目录结构。反之，无论嵌套多少文件夹，页面上都是将所有章节展示到同一层级。_index.md格式如下：
+```toml
+---
+title: "章节名or标题" 
+
+#优先级权重，章节目录排序，越小越靠前
+weight: 1
+
+description: "本章简短的描述内容"
+---
+ md格式正文内容，如本章的大纲，和详细介绍可放在这里
+
+```
+4.章节内容书写，新建md文件如a.md,格式如下:
+
+```toml
+---
+title: "章节名or标题" 
+
+#优先级权重，章节目录排序，越小越靠前
+weight: 1
+
+description: "本章简短的描述内容"
+---
+ md格式正文内容，该章具体内容
+
+```
 
 ## Repo organization
 
@@ -12,7 +56,7 @@ netlify (see netlify.toml and build.sh).
 All site content is stored in the `content` directory in markdown format.
 
 ```text
-content/en
+content/cn
 ├── _index.html  # Landing page
 ├── author       # Info about blog authors
 ├── blog         # Blog posts
