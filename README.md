@@ -57,8 +57,7 @@ All site content is stored in the `content` directory in markdown format.
 
 ```text
 content/cn
-├── _index.html  # Landing page
-├── author       # Info about blog authors
+├── _index.md    # home page 
 ├── blog         # Blog posts
 ├── docs         # Documentation pages
 └── search.md
