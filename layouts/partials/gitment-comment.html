@@ -1,0 +1,19 @@
+<!-- 评论系统 -->
+<div class="page-blank">
+    <div id="disqus_thread"></div>
+    <div id="git-comments"></div>
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            id: '{{ .Page.Date }}',  // 可选, 默认为 location.href
+            owner: 'lanceMe',
+            repo: 'https://github.com/lanceMe/whatstack.tech.comment',
+            oauth: {
+                client_id: '6643231c7e90fc76b8af',
+                client_secret: '803db82b34bea53a83092930edd6c69aee532d9d',
+            }
+        })
+        gitment.render('git-comments')
+    </script>
+</div>
