@@ -3,17 +3,16 @@
 set -euo pipefail
 
 echo "Npm install"
+
 npm install
 
-echo "Running hugo"
+echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
+echo -e "\033[0;32mRunning hugo...\033[0m"
+
 hugo --minify --printPathWarnings --gc
 
 
-echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
-
-git submodule add git@github.com:whatstack-tech/whatstack.github.io.git public
-
-echo -e "\033[0;32mAdd public folder to submodule...\033[0m"
+echo -e "\033[0;32m Uploading  pubilc folder...\033[0m"
 
 # Go To Public folder
 cd public
