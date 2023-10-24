@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fission/fission.io.git"
+    "url": "git+https://github.com/whatstack-tech/whatstack.tech.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fission/fission.io/issues"
+    "url": "https://github.com/whatstack-tech/whatstack.tech/issues"
   },
-  "homepage": "https://github.com/fission/fission.io#readme"
+  "homepage": "https://github.com/whatstack-tech/whatstack.tech#readme"
 }

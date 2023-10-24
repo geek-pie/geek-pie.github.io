@@ -87,8 +87,6 @@ weight = 1
 [params]
 books_directory = "content/cn/docs"
 copyright = "Copyright © 2023 whatstack"
-github_repo = "https://github.com/fission/fission.io"
-github_project_repo = "https://github.com/fission/fission"
 privacy_policy = ""
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
@@ -142,8 +140,8 @@ sidebar_search_disable = false
 [params.ui.feedback]
 enable = true
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
-no = 'Sorry to hear that. Please <a href="https://github.com/fission/fission/issues/new">tell us how we can improve</a>.'
-yes = 'Glad to hear it! Please <a href="https://github.com/fission/fission/issues/new">tell us how we can improve</a>.'
+no = 'Sorry to hear that. Please <a href="https://github.com/whatstack-tech/whatstack.tech/issues/new">tell us how we can improve</a>.'
+yes = 'Glad to hear it! Please <a href="https://github.com/whatstack-tech/whatstack.tech/issues/new">tell us how we can improve</a>.'
 
 # Adds a reading time to the top of each doc.
 # If you want this feature, but occasionally need to remove the Reading time from a single page, 
@@ -154,20 +152,10 @@ enable = false
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
-desc = "Follow us on Twitter to get the latest news!"
-icon = "fab fa-twitter"
-name = "Twitter"
-url = "https://twitter.com/fissionio"
-[[params.links.user]]
-desc = "Chat with other project users in #users"
-icon = "fab fa-slack"
-name = "Slack"
-url = "/slack"
-[[params.links.user]]
 desc = "Development takes place here!"
 icon = "fab fa-github"
 name = "GitHub"
-url = "https://github.com/fission/fission"
+url = "https://github.com/whatstack-tech/whatstack.tech"
 
 [sitemap]
 changefreq = "monthly"
@@ -193,7 +181,7 @@ pre = "<i class='fas fa-certificate'></i>"
 weight = 30
 [[menu.main]]
 name = "GitHub"
-url = "https://github.com/fission"
+url = "https://github.com/whatstack-tech/whatstack.tech"
 pre = "<i class='fab fa-github'></i>"
 weight = 40
 [[menu.main]]
