@@ -1,7 +1,7 @@
 
 baseURL = "https://whatstack.tech/"
 enableRobotsTXT = true
-title = "whatstack"
+title = "Whatstack"
 
 # Will give values to .Lastmod etc.
 # enableGitInfo = true
@@ -78,7 +78,7 @@ id = "G-JBYJP9EYZC"
 [languages.cn]
 description = "Fast Serverless Functions for Kubernetes"
 languageName = "中文"
-title = "whatstack"
+title = "Whatstack"
 # Weight used for sorting.
 weight = 1
 
@@ -86,7 +86,7 @@ weight = 1
 
 [params]
 books_directory = "content/cn/docs"
-copyright = "Copyright © 2023 whatstack"
+copyright = "Copyright © 2023 Whatstack"
 privacy_policy = ""
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
