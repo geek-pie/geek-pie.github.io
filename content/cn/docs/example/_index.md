@@ -13,7 +13,11 @@ categories: ["后端","Java"]
 # 书籍封面
 image: "/images/docs/example/cover.png"
 
-authorLink: "/authors/liujun"
+#作者信息
+author:
+  title: 卖报小书童
+  logo: "/images/authors/shutong.jpg"
+  description: 专注前端技术
 
 description: >
   book description

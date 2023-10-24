@@ -7,7 +7,7 @@
         </div>
         {{/* Query */}}
         {{ $query := where .Site.Pages "Type" "book" }}
-        {{ range $query }}
+        {{ range sort $query ".Params.weight" }}
         <div class="col-lg-6">
             <div class="card-shadow">
                 <img class="card-background card-left" src="{{ .Params.image }}" />
@@ -20,12 +20,6 @@
                         <span class="card-badge">{{.}}</span>
                         {{ end }}
                     </div>
-                    <div class="card-shadow-content">
-                        <p class="section-text">
-                            {{ .Description }}
-                        </p>
-
-                    </div>
                     {{ if and .Params.author .Params.author.title}}
                     <div class="card-author">
                         <span class="author author-logo">
@@ -35,9 +29,16 @@
                         <span class="author author-desc">{{.Params.author.description}}</span>
                     </div>
                     {{ end }}
+                    <div class="card-shadow-content">
+                        <p class="section-text">
+                            {{ .Description }}
+                        </p>
+
+                    </div>
+                    
 
                     <a href="{{ .Permalink }}">
-                        <button class="hero-mid align-self-end">{{$params.books.linkText}}</button>
+                        <button class="hero-mid-2 align-self-end">{{$params.books.linkText}}</button>
                     </a>
                 </div>
 

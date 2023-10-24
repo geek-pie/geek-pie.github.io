@@ -12,7 +12,16 @@ type: book
 weight: 1
 
 #书籍自定义分类标签，如"NodeJS" "Java" "大数据" 等热门标签,在书籍列表中展示
-tag: "热门标签"
+tags: ["安全","云原生","出版物","独家翻译"]
+
+#分类，展示和分类筛选（开发中）
+categories: ["前端","NodeJs"]
+
+#作者信息
+author:
+  title: 卖报小书童
+  logo: "/images/authors/shutong.jpg"
+  description: 专注前端技术
 
 description: "本书简短的描述内容，在书籍列表中展示"
 ---
