@@ -112,6 +112,13 @@ images = ["images/og-image-fission.png"]
 disqusShortname = 'whatstack'
 hide_feedback= false
 
+[params.gitment]
+owner="lanceMe"
+repo="Whatstack"
+client_id='6643231c7e90fc76b8af'
+client_secret='803db82b34bea53a83092930edd6c69aee532d9d'
+
+
 [params.social]
 github = 'fission'
 slackurl = "/slack"

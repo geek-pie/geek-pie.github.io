@@ -6,12 +6,12 @@
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
         var gitment = new Gitment({
-            id: '{{ .Page.Date }}',  // 可选, 默认为 location.href
-            owner: 'lanceMe',
-            repo: 'https://github.com/lanceMe/whatstack.tech.comment',
+            id: '{{ .Page.Title }}',  // 可选, 默认为 location.href
+            owner: '{{.Site.Params.gitment.owner}}',
+            repo: '{{.Site.Params.gitment.repo}}',
             oauth: {
-                client_id: '6643231c7e90fc76b8af',
-                client_secret: '803db82b34bea53a83092930edd6c69aee532d9d',
+                client_id: '{{.Site.Params.gitment.client_id}}',
+                client_secret: '{{.Site.Params.gitment.client_secret}}',
             }
         })
         gitment.render('git-comments')
