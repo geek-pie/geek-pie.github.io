@@ -113,10 +113,10 @@ disqusShortname = 'whatstack'
 hide_feedback= false
 
 [params.gitment]
-owner="lanceMe"
-repo="Whatstack"
-client_id='6643231c7e90fc76b8af'
-client_secret='803db82b34bea53a83092930edd6c69aee532d9d'
+owner="whatstack-tech"
+repo="whatstack.tech"
+client_id='457cdf9040de65cad180'
+client_secret='7b02266c2b2ba8eaa60628ae480768a8eaf987d2'
 
 
 [params.social]
