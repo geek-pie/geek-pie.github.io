@@ -57,7 +57,7 @@ jobs:
         #   hugo \
         #     --minify \
         #     --baseURL "${{ steps.pages.outputs.base_url }}/"
-          run: ./build.sh
+        run: ./build.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
