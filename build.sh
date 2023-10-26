@@ -8,5 +8,8 @@ npm install
 
 echo -e "\033[0;32mRunning hugo...\033[0m"
 
-hugo --minify --printPathWarnings --gc
+#
+rm -rf pubilc/*
+
+hugo --minify --printPathWarnings --gc --ignoreCache
 
