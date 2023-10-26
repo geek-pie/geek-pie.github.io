@@ -1,0 +1,27 @@
+# 菜单
+[[main]]
+name = "主页"
+url = "/"
+pre = "<i class='fas fa-book'></i>"
+weight = 10
+[[main]]
+name = "文章"
+url = "/blog/"
+pre = "<i class='fas fa-blog'></i>"
+weight = 20
+[[main]]
+name = "Examples"
+url = "/examples/"
+pre = "<i class='fas fa-certificate'></i>"
+weight = 30
+[[main]]
+name = "GitHub"
+url = "https://github.com/whatstack-tech/whatstack.tech"
+pre = "<i class='fab fa-github'></i>"
+weight = 40
+[[main]]
+name = "支持"
+url = "/support/"
+pre = "<i class='fas fa-briefcase'></i>"
+weight = 50
+

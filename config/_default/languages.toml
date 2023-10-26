@@ -1,0 +1,9 @@
+# Language configuration
+[cn]
+description = "Fast Serverless Functions for Kubernetes"
+languageName = "中文"
+title = "Whatstack"
+# Weight used for sorting.
+weight = 1
+
+# Everything below this are Site Params
