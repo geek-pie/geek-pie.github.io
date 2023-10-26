@@ -4,11 +4,11 @@ name = "主页"
 url = "/"
 pre = "<i class='fas fa-book'></i>"
 weight = 10
-[[main]]
-name = "文章"
-url = "/blog/"
-pre = "<i class='fas fa-blog'></i>"
-weight = 20
+# [[main]]
+# name = "文章"
+# url = "/blog/"
+# pre = "<i class='fas fa-blog'></i>"
+# weight = 20
 [[main]]
 name = "Examples"
 url = "/examples/"
