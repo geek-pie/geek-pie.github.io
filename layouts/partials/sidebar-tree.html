@@ -26,8 +26,9 @@
     <div class="td-sidebar-nav__section nav-item dropdown d-block d-lg-none">
       {{ partial "navbar-lang-selector.html" . }}
     </div>
+    
     {{ end -}}
-    {{ $navRoot := cond (and (ne .Params.toc_root true) (eq .Site.Home.Type "docs")) .Site.Home .FirstSection -}}
+    {{ $navRoot :=. }}
     {{ $ulNr := 0 -}}
     {{ $ulShow := .Site.Params.ui.ul_show | default 1 -}}
     {{ $sidebarMenuTruncate := .Site.Params.ui.sidebar_menu_truncate | default 50 -}}
@@ -36,6 +37,8 @@
     </ul>
   </nav>
 </div>
+<script>
+</script>
 {{ define "section-tree-nav-section" -}}
 {{ $s := .section -}}
 {{ $p := .page -}}
