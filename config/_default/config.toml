@@ -69,3 +69,6 @@ path = "github.com/google/docsy/dependencies"
   _merge = "deep"
 [minify]
 _merge = "deep"
+
+[aliases]
+"/docs" = "/books"
