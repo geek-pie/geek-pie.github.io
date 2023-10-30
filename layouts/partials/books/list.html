@@ -8,41 +8,40 @@
         {{/* Query */}}
         {{ $query := where .Site.Pages "Type" "book" }}
         {{ range sort $query ".Params.weight" }}
-        <div class="col-lg-6">
-            <div class="card-shadow">
-                <img class="card-background card-left" src="{{ .Params.image }}" />
-                <div class="card-right">
-                    <h4 class="section-text-bold mt-4">
-                        {{ .Title }}
-                    </h4>
-                    <div class="card-tags">
-                        {{ range .Params.tags }}
-                        <span class="card-badge">{{.}}</span>
+        <div class="col-lg-4">
+            <a href="{{ .Permalink }}">
+                <div class="card-shadow">
+                    <img class="card-background card-left" src="{{ .Params.image }}" />
+                    <div class="card-right">
+                        <h4 class="section-text-bold mt-4">
+                            {{ .Title }}
+                        </h4>
+                        <div class="card-shadow-content">
+                            <p class="section-text">
+                                {{ .Description }}
+                            </p>
+                        </div>
+                        <div class="card-tags">
+                            {{ range .Params.tags }}
+                            <span class="card-badge">{{.}}</span>
+                            {{ end }}
+                        </div>
+                        {{ if and .Params.author .Params.author.title}}
+                        <div class="card-author">
+                            <span class="author author-logo">
+                                <img src="{{ .Params.author.logo }}" />
+                            </span>
+                            <span class="author author-name">{{.Params.author.title}}</span>
+                            <span class="author author-desc">{{.Params.author.description}}</span>
+                        </div>
                         {{ end }}
-                    </div>
-                    {{ if and .Params.author .Params.author.title}}
-                    <div class="card-author">
-                        <span class="author author-logo">
-                            <img src="{{ .Params.author.logo }}" />
-                        </span>
-                        <span class="author author-name">{{.Params.author.title}}</span>
-                        <span class="author author-desc">{{.Params.author.description}}</span>
-                    </div>
-                    {{ end }}
-                    <div class="card-shadow-content">
-                        <p class="section-text">
-                            {{ .Description }}
-                        </p>
+                       
 
+                        <!-- <button class="hero-mid-2 align-self-end">{{$params.books.linkText}}</button> -->
                     </div>
-                    
 
-                    <a href="{{ .Permalink }}">
-                        <button class="hero-mid-2 align-self-end">{{$params.books.linkText}}</button>
-                    </a>
                 </div>
-
-            </div>
+            </a>
         </div>
         {{ end }}
     </div>

@@ -436,8 +436,8 @@ input[type="search"]::placeholder {
 }
 
 .whats-new .card-shadow {
-  background: white;
-  padding: 10px;
+  background-color:white;
+  padding: 30px 15px;
   min-height: unset;
   box-shadow: 0 5px 10px 0 rgba(41,26,204,0.12);
   height: 100%;
@@ -458,7 +458,7 @@ input[type="search"]::placeholder {
   -webkit-box-orient: vertical;   /* 设置或检索伸缩盒对象的子元素的排列方式 */
   -webkit-line-clamp: 2;  /* 指定几行 */
   overflow: hidden;
-  margin: 5px 0 0 0;
+  margin: 0 0 10px 0;
 
 }
 .enterprise-company {
@@ -767,6 +767,7 @@ a {
 }
 .whats-new{
   background: none;
+  background-color: #f7f7f7;
 }
 .whats-new .section-title{
   color: #000;
@@ -801,7 +802,7 @@ footer .list-inline{
   padding-top: 0px;
   // margin-left: 20px;
   .section-text-bold{
-    margin: 0px 0 5px 0 !important;
+    margin: 0px 0 10px 0 !important;
     min-height: 0 !important;
   }
 
