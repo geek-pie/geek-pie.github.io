@@ -4,8 +4,11 @@
 <head>
   {{ partial "head.html" . }}
 </head>
-
-<body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
+<script>
+  console.log({{.Type}})
+</script>
+<body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }} {{ if eq .Type "card-list" }}
+  whats-new{{end}}">
   <header>
     {{ partial "navbar.html" . }}
   </header>
@@ -23,18 +26,17 @@
           {{ partial "taxonomy_terms_clouds.html" . }}
         </aside>
         {{ end }}
+        {{ if eq .Type "card-list" }}
+        <main class="col-12 col-md-10 col-xl-10 display-center" role="main">
+          {{ partial "books/list.html" . -}}
+        </main>
+        {{ else }}
         <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
           {{ partial "version-banner.html" . }}
           {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
-          <!-- {{ block "main" . }}{{ end }} -->
-          {{ if eq .Type "card-list" }}
-          <!-- {{ block "card-list" . }}{{ end }} -->
-          {{ partial "books/list.html" . -}}
-          {{ else }}
           {{ block "main" . }}{{ end }}
-          {{ end }}
-
         </main>
+        {{ end }}
       </div>
     </div>
     {{ partial "footer.html" . }}
