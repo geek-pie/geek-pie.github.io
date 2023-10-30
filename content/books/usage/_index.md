@@ -10,7 +10,7 @@ tags: ["安全","云原生","中华人民共和国出版物","中华人民共和
 #分类，展示和分类筛选（开发中）
 categories: ["前端","NodeJs"]
 # 书籍封面
-image: "/images/docs/usage/cover.svg"
+image: "/images/books/usage/cover.svg"
 
 #作者信息
 author:
