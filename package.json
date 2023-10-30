@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/whatstack-tech/whatstack.tech.git"
+    "url": "git+https://github.com/TechSoar/whatstack.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/whatstack-tech/whatstack.tech/issues"
+    "url": "https://github.com/TechSoar/whatstack/issues"
   },
-  "homepage": "https://github.com/whatstack-tech/whatstack.tech#readme"
+  "homepage": "https://github.com/TechSoar/whatstack#readme"
 }
