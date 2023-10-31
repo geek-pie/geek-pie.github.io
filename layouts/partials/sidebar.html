@@ -19,11 +19,9 @@
 </script>
 {{ partialCached "sidebar-tree.html" . .FirstSection.RelPermalink }}
 {{ else -}}
-<script>
-</script>
 {{ $currentLink := .CurrentSection.RelPermalink }}
 {{ $links := split $currentLink "/" }}
 {{ $mainLink := printf "%s/%s/%s" (index $links 0) (index $links 1) (index $links 2) }}
-{{ $page := .GetPage $mainLink }}
-{{ partial "sidebar-tree.html" $page }}
+{{ $root := .GetPage $mainLink }}
+{{ partial "sidebar-tree.html" (dict "root" $root "section" .) }}
 {{- end }}
