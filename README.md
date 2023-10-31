@@ -101,3 +101,7 @@ You can visit [localhost:1313](http://localhost:1313/) in browser to preview web
 4. Commit and push your changes to the branch
 5. Raise a PR to default branch, verify changes with Netlify preview URL
 6. Once PR is merged, your changes would be live on the site
+
+
+# 多级目录下gitignore
+推荐使用多级目录下的.gitignore
