@@ -26,10 +26,10 @@ disqusShortname = 'whatstack'
 hide_feedback= false
 
 [gitment]
-owner="lanceMe"
-repo="Whatstack"
-client_id='6643231c7e90fc76b8af'
-client_secret='803db82b34bea53a83092930edd6c69aee532d9d'
+owner="TechSoar"
+repo="whatstack"
+client_id='75177f7beb15ce54de5d'
+client_secret='9a9b6ee9cca52529589085240142412b51cbf488'
 
 
 [social]
