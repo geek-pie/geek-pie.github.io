@@ -8,7 +8,7 @@
         {{/* Query */}}
         {{ $query := where .Site.Pages "Type" "book" }}
         {{ range sort $query ".Params.weight" }}
-        <div class="col-lg-4">
+        <div class="col-lg-6">
             <a href="{{ .Permalink }}">
                 <div class="card-shadow">
                     <img class="card-background card-left" src="{{ .Params.image }}" />
@@ -37,7 +37,7 @@
                         {{ end }}
                        
 
-                        <!-- <button class="hero-mid-2 align-self-end">{{$params.books.linkText}}</button> -->
+                        <button class="hero-mid-2 align-self-end">{{$params.books.linkText}}</button>
                     </div>
 
                 </div>
