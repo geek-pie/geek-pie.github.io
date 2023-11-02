@@ -26,11 +26,11 @@ disqusShortname = 'whatstack'
 hide_feedback= false
 
 [gitment]
-owner="lanceMe"
-admin=["lanceMe","Xienng"]
-repo="https://github.com/TechSoar/whatstack"
-client_id='75177f7beb15ce54de5d'
-client_secret='9a9b6ee9cca52529589085240142412b51cbf488'
+owner="TechSoar"
+admin=["TechSoar","lanceMe","Xienng"]
+repo="whatstack"
+client_id='1ddb370f5cf248abf53a'
+client_secret='3fb122b4255103e59b92f6fcfbfa34bd885af365'
 
 
 [social]
