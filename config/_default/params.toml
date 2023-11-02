@@ -27,7 +27,8 @@ hide_feedback= false
 
 [gitment]
 owner="lanceMe"
-repo="whatstack"
+admin=["lanceMe","Xienng"]
+repo="https://github.com/TechSoar/whatstack"
 client_id='75177f7beb15ce54de5d'
 client_secret='9a9b6ee9cca52529589085240142412b51cbf488'
 
