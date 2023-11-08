@@ -1,3 +1,7 @@
+# [WhatStack](https://whatstack.tech/)
+
+这个是[WhatStack](https://whatstack.tech/)的源仓库。包含了所有的开源书籍以及相关的代码。WhatStack 目前基于[Hugo](https://gohugo.io/)和[Netlify](https://www.netlify.com/)[构建](CONTRIBUTING.md) 。
+
 ## 如何写书
 1. 在content/cn/docs目录下新建文件夹（如usage），书籍的所有内容都放在该文件夹下（为了方便将该文件夹简称u）。
 2. 在上述文件夹u中新建_index.md，格式如下
