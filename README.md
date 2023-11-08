@@ -98,5 +98,5 @@ description: "本章简短的描述内容"
 然后通过 [localhost:1313](http://localhost:1313/) 预览书籍效果
 
 # 其他提交细节
-## 多级目录下gitignore
-推荐使用多级目录下的.gitignore
+* 忽略不需要的文件：推荐使用多级目录下的`.gitignore`
+* 书中的图片和代码：在对应书籍`asserts`目录下，新建一个`images`文件夹和`code`文件夹，用来保存图片和代码
