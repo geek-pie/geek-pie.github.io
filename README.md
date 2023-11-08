@@ -1,11 +1,26 @@
 # [WhatStack](https://whatstack.tech/)
 
-这个是[WhatStack](https://whatstack.tech/)的源仓库。包含了所有的开源书籍以及相关的代码。WhatStack 目前基于[Hugo](https://gohugo.io/)和[Netlify](https://www.netlify.com/)[构建](CONTRIBUTING.md) 。
+这个是[WhatStack](https://whatstack.tech/)的源仓库。包含了所有的开源书籍以及相关的代码。WhatStack 目前基于[Hugo](https://gohugo.io/)和[Netlify](https://www.netlify.com/) 。
 
-## 如何写书
-1. 在content/cn/docs目录下新建文件夹（如usage），书籍的所有内容都放在该文件夹下（为了方便将该文件夹简称u）。
-2. 在上述文件夹u中新建_index.md，格式如下
-```toml
+
+# 如何提交书籍
+通过fork仓库的方式提交`Pull Request`。为了更好的和他人协作，比较建议的方式是：每个书籍一个分支，避免受到其他作者的影响；基本流程
+
+1.fork一个新的分支
+
+2.提交相关的书籍内容
+
+3.在本地使用Hugo服务器验证你的更改
+
+4.提交并推送你的更改到该分支
+
+5.向主仓库提交PR，通过一旦PR被合并，更改将会在网站上生效
+
+## 如何组织书籍
+1. 在`content/books`目录下新建文件夹（如`usage`），书籍的所有内容都放在该文件夹下。
+2. 在`usage`中新建`_index.md`，格式如下:
+   
+```yaml
 ---
 title: "书名" 
 
@@ -27,13 +42,28 @@ author:
   logo: "/images/authors/shutong.jpg"
   description: 专注前端技术
 
-description: "本书简短的描述内容，在书籍列表中展示"
+description: "本书简短的描述内容，会在书籍列表中展示"
 ---
- md格式正文内容，如本书的大纲，和详细介绍可放在这里
-
 ```
-3. 章节目录组织，在文件夹u下新建任意子文件夹，用于存放不同的章节内容，同时子文件夹也是以同样的形式无限嵌套的，用于组织多层目录，当子目录中也新建_index.md文件时，在页面上才能展示出正确的章节目录结构。反之，无论嵌套多少文件夹，页面上都是将所有章节展示到同一层级。_index.md格式如下：
-```toml
+正文内容是标准的markdown语法。
+
+### 章节目录组织
+章节目录组织，在文件夹`usage`下新建任意子文件夹，用于存放不同的章节内容，同时子文件夹也是以同样的形式无限嵌套的，用于组织多层目录，当子目录中也需要新建`_index.md`文件，才在页面上才能展示出正确的章节目录结构。
+反之，无论嵌套多少文件夹，页面上都是将所有章节展示到同一层级。`_index.md`格式如下：
+
+```yaml
+---
+title: "章节名or标题"
+
+#优先级权重，章节目录排序，越小越靠前
+weight: 1
+---
+```
+
+### 正文
+4.章节内容书写，新建md文件如`a.md`,格式如下:
+
+```yaml
 ---
 title: "章节名or标题" 
 
@@ -42,52 +72,22 @@ weight: 1
 
 description: "本章简短的描述内容"
 ---
- md格式正文内容，如本章的大纲，和详细介绍可放在这里
-
 ```
-4.章节内容书写，新建md文件如a.md,格式如下:
+剩下的就是基于markdown语法的正文内容。
 
-```toml
----
-title: "章节名or标题" 
 
-#优先级权重，章节目录排序，越小越靠前
-weight: 1
 
-description: "本章简短的描述内容"
----
- md格式正文内容，该章具体内容
 
-```
-
-## Repo organization
-
-This is a [hugo](https://gohugo.io) statically-generated site, hosted
-on [netlify](https://netlify.com).  The site is automatically built by
-netlify (see netlify.toml and build.sh).
-
-All site content is stored in the `content` directory in markdown format.
-
-```text
-content/cn
-├── _index.md    # home page 
-├── blog         # Blog posts
-├── docs         # Documentation pages
-└── search.md
-```
-
-## Contributing
-
+## 本地预览
 ### Setup
-
-1. Clone and setup
+1. 安装
 
     ```sh
     # Install NPM dependencies
     npm install
     ```
 
-2. Run Hugo server
+2. 本地运行hugo预览效果
 
     ```sh
     $ hugo server
@@ -95,17 +95,8 @@ content/cn
     Press Ctrl+C to stop
     ```
 
-You can visit [localhost:1313](http://localhost:1313/) in browser to preview website.
+然后通过 [localhost:1313](http://localhost:1313/) 预览书籍效果
 
-### Making changes
-
-1. Create a new branch
-2. Make your changes
-3. Verify your changes locally with Hugo server
-4. Commit and push your changes to the branch
-5. Raise a PR to default branch, verify changes with Netlify preview URL
-6. Once PR is merged, your changes would be live on the site
-
-
-# 多级目录下gitignore
+# 其他提交细节
+## 多级目录下gitignore
 推荐使用多级目录下的.gitignore
