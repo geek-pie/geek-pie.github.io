@@ -1,47 +1,65 @@
 {{ $page := . }}
 {{ $params := $page.Params }}
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12" style="margin-bottom: 30px">
-            <h2 class="section-title">{{$params.books.title}}</h2>
-        </div>
-        {{/* Query */}}
-        {{ $query := where .Site.Pages "Type" "book" }}
-        {{ range sort $query ".Params.weight" }}
-        <div class="col-lg-6">
-            <a href="{{ .Permalink }}">
-                <div class="card-shadow">
-                    <img class="card-background card-left" src="{{ .Params.image }}" />
-                    <div class="card-right">
-                        <h4 class="section-text-bold mt-4">
-                            {{ .Title }}
-                        </h4>
-                        <div class="card-shadow-content">
-                            <p class="section-text">
-                                {{ .Description }}
-                            </p>
+<div class="body-container">
+    <!-- <div class="wave-bg">
+        <img src="/images/wave.webp" />
+    </div> -->
+    <div class="books">
+        <div class="page-container">
+            <div class="col-lg-12" style="margin-bottom: 30px">
+                <h2 class="section-title">{{$params.books.title}}</h2>
+            </div>
+            <div class="row-body">
+                {{/* Query */}}
+                {{ $query := where .Site.Pages "Type" "book" }}
+                {{ range sort $query ".Params.weight" }}
+                <div class="row-container">
+                    <div class="row-item">
+                    <a href="{{ .Permalink }}" class="row-item-link">
+                    </a>
+                    <div class="card-shadow">
+                        <div class="card-image-cover">
+                            <img class="card-image" src="{{ .Params.image }}" />
                         </div>
-                        <div class="card-tags">
-                            {{ range .Params.tags }}
-                            <span class="card-badge">{{.}}</span>
+        
+                        <div class="card-mid">
+                            <div class="card-title">
+                                {{ .Title }}
+                            </div>
+                            <div class="card-desc">
+                                <div class="card-desc-content">
+                                    {{ .Description }}
+        
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-bottom">
+                            <div class="card-tags">
+                                <div class="tag-horizontal"></div>
+                                {{ range $tag := first 3 .Params.tags }}
+                                <span class="card-badge">{{$tag}}</span>
+                                {{ end }}
+                            </div>
+                            {{ if and .Params.author .Params.author.title}}
+                            <div class="card-author">
+                                <span class="author author-desc">作者：</span>
+                                <span class="author author-logo">
+                                    <img src="{{ .Params.author.logo }}" />
+                                </span>
+                                
+                                <span class="author author-name">{{.Params.author.title}}</span>
+                                
+                            </div>
                             {{ end }}
+        
+                            <!-- <button class="hero-mid-2 align-self-end">{{$params.books.linkText}}</button> -->
                         </div>
-                        {{ if and .Params.author .Params.author.title}}
-                        <div class="card-author">
-                            <span class="author author-logo">
-                                <img src="{{ .Params.author.logo }}" />
-                            </span>
-                            <span class="author author-name">{{.Params.author.title}}</span>
-                            <span class="author author-desc">{{.Params.author.description}}</span>
-                        </div>
-                        {{ end }}
-                       
-
-                        <button class="hero-mid-2 align-self-end">{{$params.books.linkText}}</button>
+        
                     </div>
-
                 </div>
-            </a>
-        </div>
-        {{ end }}
+                </div>
+                {{ end }}
+            </div> 
     </div>
+</div>

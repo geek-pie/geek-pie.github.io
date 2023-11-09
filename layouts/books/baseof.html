@@ -12,10 +12,12 @@
   <header>
     {{ partial "navbar.html" . }}
   </header>
+  
   <div class="container-fluid td-outer">
     <div class="td-main">
+      {{ if ne .Type "card-list" }}
       <div class="row flex-xl-nowrap">
-        {{ if ne .Type "card-list" }}
+        
         <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
           {{ partial "sidebar.html" . }}
           <!-- {{ partial "sidebar.html" . }} -->
@@ -25,20 +27,20 @@
           {{ partial "toc.html" . }}
           {{ partial "taxonomy_terms_clouds.html" . }}
         </aside>
-        {{ end }}
-        {{ if eq .Type "card-list" }}
-        <main class="col-12 col-md-10 col-xl-10 display-center" role="main">
-          {{ partial "books/list.html" . -}}
-        </main>
-        {{ else }}
+        
         <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
           {{ partial "version-banner.html" . }}
           {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
           {{ block "main" . }}{{ end }}
         </main>
-        {{ end }}
       </div>
+      {{ else }}
+        <div class="root-book-list">
+          {{ partial "books/list.html" . -}}
+        </div>
+     {{end}}   
     </div>
+    
     {{ partial "footer.html" . }}
   </div>
   {{ partial "scripts.html" . }}
