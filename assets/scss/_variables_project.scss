@@ -650,9 +650,9 @@ input[type="search"]::placeholder {
   }
 }
 
-// .show-mobile-big {
-//   display: none;
-// }
+.show-mobile-big {
+  display: none;
+}
 
 @media (max-width: 767px) {
   .show-mobile-big {
@@ -901,12 +901,13 @@ footer .list-inline {
 }
 
 
-@media screen and (min-width: 990px){
+@media screen and (min-width: 990px) {
   .row-container {
     // flex: 0 0 auto;
     width: 25%;
   }
 }
+
 @media screen and (min-width: 768px) and (max-width: 989px) {
   .row-container {
     // flex: 0 0 auto;
@@ -924,8 +925,8 @@ footer .list-inline {
 .row-item {
   position: relative;
   height: 359px;
-  border-radius: 2px;
-  // border: 1px solid #8147d2;
+  border-radius: 4px;
+  border-left: 4px solid #e1e0e0;
   margin-right: 30px;
   // color: white;
   font-weight: 400;
@@ -1098,6 +1099,11 @@ footer .list-inline {
   border-style: solid;
 }
 
+.author-link {
+  position: relative;
+  z-index: 3;
+}
+
 .card-author {
   // background-color: rgba(21,25,43,1);
   padding-top: 10px;
@@ -1107,6 +1113,7 @@ footer .list-inline {
   // margin-left: -10px;
   font-size: 14px;
   font-weight: 700;
+  color: #858c96;
 
   // color: #000;
   // color: rgba(6, 0, 12, 0.5);
@@ -1136,11 +1143,147 @@ footer .list-inline {
     // padding-left: 10px;
     // font-size: 14px;
     line-height: 15px;
-    color: #858c96;
+
     // border-left: 2px solid rgba(0, 0, 0, 0.6);
   }
 
 }
-.root-book-list{
+
+.root-book-list {
   padding-top: 64px;
+}
+
+
+
+// authers
+.authers {
+
+  .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    --bs-gutter-x: 1.5rem;
+
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+
+  }
+
+  .personal {
+    position: relative;
+    background: #f6f5ff;
+    background-image: url(/images/authors/bg.webp);
+    background-size: cover;
+    background-position: 50%;
+    // background: rgba(255, 255, 255, .7);
+    width: 100%;
+
+    margin-top: 64px;
+
+    .backdrop {
+      backdrop-filter: blur(3px);
+    }
+
+    .info {
+      padding: 60px 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .name {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        max-width: 50%;
+        color: #fff;
+        backdrop-filter: blur(30px);
+        background-color: rgba(189, 200, 249, 0.3);
+        border-radius: 8px;
+        padding: 30px;
+
+        .title {
+          font-size: 36px;
+          font-weight: 700;
+        }
+      }
+
+      .personal-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          // width: 20%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 50% 50%;
+          margin-bottom: 30px;
+        }
+
+        .big-icon {
+          font-size: 2rem;
+          margin-left: 10px;
+          color: white;
+        }
+      }
+    }
+
+  }
+  .content{
+    margin:50px auto;
+    padding: 30px 30px;
+    border-radius: 30px;
+    max-width: 1200px;
+  background-color: rgb(237, 237, 237);
+
+  }
+.interests-education{
+  
+  // margin: 0 auto;
+  display: flex;
+  align-items:stretch;
+  justify-content: space-around;
+  
+  .interests {
+    .interest{
+      margin-top: 10px;
+    }
+  }
+  .education{
+    .course-info{
+      margin-top: 10px;
+    }
+  }
+  .info{
+
+    width: 49%;
+    // height: ;
+
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    
+    :first-child{
+      margin-right: 2%;
+    }
+    .title{
+      font-size: 30px;
+      font-weight: 700;
+    }
+  }
+}
+.md-content{
+  margin-top: 60px;
+  padding: 30px;
+  border-top:2px solid rgba(0,0,0,0.6) ;
+}
+
 }

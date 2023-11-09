@@ -42,15 +42,18 @@
                                 {{ end }}
                             </div>
                             {{ if and .Params.author .Params.author.title}}
-                            <div class="card-author">
-                                <span class="author author-desc">作者：</span>
-                                <span class="author author-logo">
-                                    <img src="{{ .Params.author.logo }}" />
-                                </span>
-                                
-                                <span class="author author-name">{{.Params.author.title}}</span>
-                                
-                            </div>
+                            <a href="{{ .Params.author.link }}" class="author-link">
+                                <div class="card-author">
+                                    <span class="author author-desc">作者：</span>
+                                    <span class="author author-logo">
+                                        <img src="{{ .Params.author.logo }}" />
+                                    </span>
+                                    
+                                    <span class="author author-name">{{.Params.author.title}}</span>
+                                    
+                                </div>
+                            </a>
+                            
                             {{ end }}
         
                             <!-- <button class="hero-mid-2 align-self-end">{{$params.books.linkText}}</button> -->

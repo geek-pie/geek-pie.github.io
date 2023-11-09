@@ -14,9 +14,10 @@ image: "/images/docs/example/cover.png"
 
 #作者信息
 author:
-  title: 卖报小书童
+  title: 刘俊
   logo: "/images/authors/shutong.jpg"
   description: 专注前端技术
+  link: "/authers/liujun"
 
 #简介
 description: >

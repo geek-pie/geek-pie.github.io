@@ -1,0 +1,77 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="{{ .Site.Language.Lang }}" class="no-js">
+
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }} authers">
+  <header>
+    {{ partial "navbar.html" . }}
+  </header>
+  <div class="container-fluid td-default td-outer">
+    <main role="main" class="td-main">
+      <div class="personal">
+        <div class="backdrop">
+          <div class="info">
+            <div class="name">
+              <div class="title"> {{.Title}} </div>
+              <div> {{.Description}} </div>
+            </div>
+            <div class="personal-logo">
+              <img src="{{.Params.logo}}" />
+              <div class="social">
+                {{with .Params.social}}
+                {{ range . }}
+                <a href="{.link}">
+                  <i class="{{.icon_pack}} fa-{{.icon}} big-icon" aria-hidden="true"></i>
+                </a>
+                {{ end }}
+                {{end}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="interests-education">
+          <div class="interests info">
+            <div class="title">个人兴趣</div>
+            {{with .Params.interests}}
+            {{ range . }}
+            <div class="interest">
+              {{.}}
+            </div>
+            {{ end }}
+            {{end}}
+          </div>
+          <div class="education info">
+            <div class="title">教育</div>
+            {{with .Params.education}}
+            {{with .courses}}
+            {{ range . }}
+            <div class="course-info">
+              <div class="course">
+                <span>{{.course}}</span>
+                <span>{{.year}}</span>
+              </div>
+              <div class="institution">{{.institution}}</div>
+            </div>
+            {{ end }}
+            {{end}}
+            {{end}}
+          </div>
+        </div>
+        <div class="md-content">
+          {{with .Content}}
+          {{ . | markdownify }}
+          {{end}}
+        </div>
+      </div>
+    </main>
+    {{ partial "footer.html" . }}
+  </div>
+  {{ partial "scripts.html" . }}
+</body>
+
+</html>
