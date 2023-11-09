@@ -925,8 +925,9 @@ footer .list-inline {
 .row-item {
   position: relative;
   height: 359px;
+  max-width: 235px;
   border-radius: 4px;
-  border-left: 4px solid #e1e0e0;
+  // border-left: 2px solid #e1e0e0;
   margin-right: 30px;
   // color: white;
   font-weight: 400;
@@ -947,10 +948,10 @@ footer .list-inline {
     rgba(150, 150, 150, 0.4) 3px -3px 2px 0px,
     rgba(150, 150, 150, 0.3) 6px -6px 2px 0px,
     rgba(150, 150, 150, 0.2) 9px -9px 2px 0px,
-    rgba(150, 150, 150, 0.1) 12px -12px 2px 0px,
-    rgba(150, 150, 150, 0.08) 15px -15px 2px 0px,
+    rgba(150, 150, 150, 0.1) 12px -12px 2px 0px;
+    // rgba(150, 150, 150, 0.08) 15px -15px 2px 0px;
     // rgba(150, 150, 150, 0.08) 18px -18px,
-    rgba(150, 150, 150, 0.05) 18px -18px 2px 0px;
+    // rgba(150, 150, 150, 0.05) 18px -18px 2px 0px;
 
   // background: linear-gradient(140deg, #7055ff 0, #8c3db4 100%);
 }
@@ -970,7 +971,7 @@ footer .list-inline {
   box-sizing: content-box;
   text-align: center;
   // width: 100%;
-  // min-width: 329px;
+  // max-width: 29px;
 }
 
 .card-image-cover {
@@ -1079,7 +1080,7 @@ footer .list-inline {
   margin-left: -30px;
   // margin-top: -5px;
   position: absolute;
-  background: rgba(238, 229, 245, 1);
+  background: #e1e0e0;
   padding: 0 5px;
   width: 90%;
   display: flex;
@@ -1093,7 +1094,7 @@ footer .list-inline {
   position: absolute;
   left: 100%;
   top: 0;
-  border-color: rgba(238, 229, 245, 1) transparent rgba(238, 229, 245, 1) rgba(238, 229, 245, 1);
+  border-color: #e1e0e0 transparent #e1e0e0 #e1e0e0;
   ;
   border-width: 13px 13px 13px 0;
   border-style: solid;
