@@ -1,0 +1,3 @@
+[submodule "content/usage"]
+	path = content/usage
+	url = git@github.com:geek-pie/docsy-usage.git
