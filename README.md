@@ -100,3 +100,18 @@ description: "本章简短的描述内容"
 # 其他提交细节
 * 忽略不需要的文件：推荐使用多级目录下的`.gitignore`
 * 书中的图片和代码：在对应书籍`asserts`目录下，新建一个`images`文件夹和`code`文件夹，用来保存图片和代码
+
+# 子模块使用（仅用于内容创作，统一放于content目录下）
+
+## 添加子模块
+* 在submodules.sh中添加subrepo信息：
+
+```sh
+#添加使用说明（usage）
+git submodule add git@github.com:geek-pie/docsy-usage.git content/usage
+```
+## 更新子模块
+```sh
+* 一般情况无需关心这一步
+git submodule update --init --recursive
+```
