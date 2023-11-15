@@ -101,7 +101,7 @@ description: "本章简短的描述内容"
 * 忽略不需要的文件：推荐使用多级目录下的`.gitignore`
 * 书中的图片和代码：在对应书籍`asserts`目录下，新建一个`images`文件夹和`code`文件夹，用来保存图片和代码
 
-# 子模块使用（仅用于内容创作，统一放于content目录下）
+# 子模块使用（仅用于内容创作，统一放于content/books目录下）
 
 ## 添加子模块
 * 在submodules.sh中添加subrepo信息：
