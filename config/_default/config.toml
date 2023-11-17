@@ -1,6 +1,6 @@
-baseURL = "https://whatstack.tech/"
+baseURL = "https://geekpie.chat/"
 enableRobotsTXT = true
-title = "Whatstack"
+title = "极客π"
 
 # Will give values to .Lastmod etc.
 # enableGitInfo = true
