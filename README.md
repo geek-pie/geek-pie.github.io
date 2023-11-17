@@ -1,12 +1,18 @@
-# [WhatStack](https://whatstack.tech/)
 
-这个是[WhatStack](https://whatstack.tech/)的源仓库。包含了所有的开源书籍以及相关的代码。WhatStack 目前基于[Hugo](https://gohugo.io/)和[Netlify](https://www.netlify.com/) 。
+[Geekpie](https://geekpie.chat/) 目前基于[Hugo](https://gohugo.io/)和[Netlify](https://www.netlify.com/)构建，遵循Hugo的静态文件语法。
 
 
-# 如何提交书籍
-通过fork仓库的方式提交`Pull Request`。为了更好的和他人协作，比较建议的方式是：每个书籍一个分支，避免受到其他作者的影响；基本流程
+# 如何提交专栏
+目前基于`Git submodule`来拉取专栏的内容，因此专栏的内容和静态网站的内容可以完全分开。当专栏的内容可以上架时，需要fork当前仓库，并需要修改[.gitmodules](https://github.com/geek-pie/geek-pie.github.io/blob/main/.gitmodules)文件，让github能拉取到指定内容，并被hugo渲染：
 
-1.fork一个新的分支
+```git
+[submodule "content/books/usage"]
+	path = content/books/usage
+	url = https://github.com/geek-pie/docsy-usage.git
+        # exclude = path/to/excluded_file, path/to/excluded_director，比如排除code文件夹不同步
+        exclude = code/
+```
+
 
 2.提交相关的书籍内容
 
