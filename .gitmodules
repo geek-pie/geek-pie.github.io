@@ -1,3 +1,6 @@
 [submodule "content/books/usage"]
 	path = content/books/usage
 	url = https://github.com/geek-pie/docsy-usage.git
+        # exclude = path/to/excluded_file, path/to/excluded_director，排除code文件夹不同步
+        exclude = code/
+
