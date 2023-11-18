@@ -72,8 +72,5 @@ _merge = "deep"
 
 [aliases]
 "/docs" = "/books"
-<<<<<<< HEAD
-=======
 
 # [staticDir]
->>>>>>> 4d80c0a (update)
