@@ -16,7 +16,7 @@ pre = "<i class='fas fa-book'></i>"
 weight = 30
 [[main]]
 name = "GitHub"
-url = "https://github.com/TechSoar/whatstack"
+url = "https://github.com/geek-pie/geek-pie.github.io"
 pre = "<i class='fab fa-github'></i>"
 weight = 40
 [[main]]

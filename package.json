@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TechSoar/whatstack.git"
+    "url": "git+https://github.com/geek-pie/geek-pie.github.io"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TechSoar/whatstack/issues"
+    "url": "https://github.com/geek-pie/geek-pie.github.io/issues"
   },
-  "homepage": "https://github.com/TechSoar/whatstack#readme"
+  "homepage": "https://github.com/geek-pie/geek-pie.github.io#readme"
 }
