@@ -1,10 +1,35 @@
-
 {{ $page := . }}
 {{ $params := $page.Params }}
-<div class="hero">
-    <div class="container">
+
+
+<!-- <div class="hero"> -->
+    <!-- {{ $query := where .Site.Pages "Type" "tags" -}}
+    {{ $taxonomy := index .Site.Taxonomies -}}
+ 
+    {{ if (gt (len $taxonomy) 0) -}}
+        <div class="taxonomy taxonomy-terms-cloud ">
+            
+            <ul class="taxonomy-terms">
+                {{ range $taxonomy -}}
+                {{range $key,$value := .  }}
+                {{range .  }}
+                <li> 
+
+                    <a class="taxonomy-term" href="{{ .Page.Permalink}}" data-taxonomy-term="{{  $key }}">
+                        <span class="taxonomy-label">{{$value }} </span> 
+                    </a>
+                </li>
+                {{ end -}}
+                {{ end -}}
+                {{ end -}}
+            </ul>
+
+        </div>
+        {{ end }} -->
+    <!-- <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-xl-7 col-lg-6 col-md-6 hero-section-mobile">
+ 
                 <h1 class="hero-title">
                     {{$params.banner.title | markdownify | emojify | safeHTML }}
                 </h1>
@@ -17,10 +42,11 @@
                 <a href="{{$params.banner.link.url}}"><button class="hero-big">
                     {{ $params.banner.link.text | markdownify | emojify | safeHTML }}
                     </button></a>
+                
             </div>
             <div class="col-xl-5 col-lg-6 col-md-6 show-desktop-big">
                 <img class="img-fluid hero-banner" src="{{$params.banner.image}}" alt-text="Banner" />
             </div>
         </div>
-    </div>
-</div>
+    </div> -->
+<!-- </div> -->

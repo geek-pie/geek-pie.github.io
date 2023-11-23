@@ -1,6 +1,6 @@
 baseURL = "https://geekpie.chat/"
 enableRobotsTXT = true
-title = "极客π"
+title = "π"
 
 # Will give values to .Lastmod etc.
 # enableGitInfo = true

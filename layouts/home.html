@@ -1,9 +1,8 @@
 {{ define "main" }}
 {{ $page := . }}
 {{ $params := $page.Params }}
-
 {{ partial "banner.html" . -}}
 
-{{ partial "books/list.html" . -}}
+{{ partial "books/list.html" .   -}}
 
 {{ end }}
