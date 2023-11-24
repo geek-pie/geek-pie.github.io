@@ -99,7 +99,6 @@
             allBook.each(function (){
               const attr =   $(this).attr('data-tags')
               const isShow = attr.toLowerCase().indexOf(type)!=-1
-              console.log(type,'attr',attr ,'isShow',isShow)
               isShow ?  $(this).show():$(this).hide(); 
             })
         }
