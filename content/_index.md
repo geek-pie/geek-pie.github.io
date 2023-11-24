@@ -1,8 +1,8 @@
 ---
 tag: "home"
-linkTitle: "GeekPie"
+linkTitle: "Pie"
 banner:
-    title: "GeekPie"
+    title: "Pie"
     description: >
          GitHub 技术社区 Geekpie，致力于打造一个内容完整、星型结构化的知识体系、以及持续成长的互联网开发者学习生态圈！欢迎 Follow 关注我们 👉
     image: "/images/fission-illustration.svg"

@@ -1,68 +1,107 @@
 {{ $page := . }}
 {{ $params := $page.Params }}
+
 <div class="body-container">
     <!-- <div class="wave-bg">
         <img src="/images/wave.webp" />
     </div> -->
+  
     <div class="books">
+       
         <div class="page-container">
-            <div class="col-lg-12" style="margin-bottom: 30px">
+            <!-- <div class="col-lg-12" style="margin-bottom: 30px">
                 <h2 class="section-title">{{$params.books.title}}</h2>
+            </div> -->
+            <div class="tags-box">
+                <ul class="tag-list">
+                    <li class="tag-item active" data-label=""><span>全部</span></li>
+                    <!-- <li>{{.Site.Params.Taxonomy }}</li> -->
+                    {{ range $index, $taxo := .Site.Params.Taxonomy.taxonomypageheader }}
+                        {{if $index}}
+                       
+                        {{else}} 
+                        {{ $taxonomy := index $page.Site.Taxonomies (lower $taxo) -}}
+                            {{range $key,$val := $taxonomy}}                    
+                                <li class="tag-item"  data-label="{{ $key}}">{{ $key}}</li>
+                            {{ end -}}
+                      
+                        {{ end -}}
+                      
+
+                    {{ end }}
+                   
+                </ul>
             </div>
             <div class="row-body">
                 {{/* Query */}}
                 {{ $query := where .Site.Pages "Type" "book" }}
                 {{ range sort $query ".Params.weight" }}
-                <div class="row-container">
-                    <div class="row-item">
-                    <a href="{{ .Permalink }}" class="row-item-link">
-                    </a>
-                    <div class="card-shadow">
-                        <div class="card-image-cover">
-                            <img class="card-image" src="{{ .Params.image }}" />
-                        </div>
-        
-                        <div class="card-mid">
-                            <div class="card-title">
-                                {{ .Title }}
+               
+                <div class="col-lg-12 col-sl-12 row-container book-box" data-tags="{{.Params.tags}}">
+                    <div class="book-item">
+                        <a href="{{ .Permalink }}" class="row-item-link"></a>
+                        <div class="book-shadow">
+                            <div class="left-box image-cover">
+                                <img class="book-image" src="{{ .Params.image }}" />
                             </div>
-                            <div class="card-desc">
-                                <div class="card-desc-content">
-                                    {{ .Description }}
-        
+                            <div class="right-box">                      
+                                <div class="book-mid">
+                                    <div class="book-title">
+                                       <span>{{ .Title }}</span> 
+                                        <div class="book-auther">
+                                            {{ if and .Params.author .Params.author.title}}
+                                            <a href="{{ .Params.author.link }}" class="author-link">
+                                                <!-- <span class="author author-desc">作者：</span>
+                                                <span class="author author-logo">
+                                                    <img src="{{ .Params.author.logo }}" />
+                                                </span>
+                                                    -->
+                                                <span class="author author-name">{{.Params.author.title}}</span>
+                                            </a>
+                                            {{ end }}
+                                            <div class="book-tags">
+                                                {{ range $tag := first 3 .Params.tags }}
+                                                <span class="card-badge"> {{$tag}}</span>
+                                                {{ end }}
+                                            </div>
+                                            <!-- <button class="hero-mid-2 align-self-end">{{$params.books.linkText}}</button> -->
+                                        </div>
+                                    </div>
+                                    <div class="book-desc">
+                                        <div class="book-desc-content ellipsis-2">
+                                            {{ .Description }}
+                                        </div>
+                                    </div>
                                 </div>
+                                
+                               
                             </div>
                         </div>
-                        
-                        <div class="card-bottom">
-                            <div class="card-tags">
-                                <div class="tag-horizontal"></div>
-                                {{ range $tag := first 3 .Params.tags }}
-                                <span class="card-badge">{{$tag}}</span>
-                                {{ end }}
-                            </div>
-                            {{ if and .Params.author .Params.author.title}}
-                            <a href="{{ .Params.author.link }}" class="author-link">
-                                <div class="card-author">
-                                    <span class="author author-desc">作者：</span>
-                                    <span class="author author-logo">
-                                        <img src="{{ .Params.author.logo }}" />
-                                    </span>
-                                    
-                                    <span class="author author-name">{{.Params.author.title}}</span>
-                                    
-                                </div>
-                            </a>
-                            
-                            {{ end }}
-        
-                            <!-- <button class="hero-mid-2 align-self-end">{{$params.books.linkText}}</button> -->
-                        </div>
-        
                     </div>
-                </div>
                 </div>
                 {{ end }}
             </div> 
     </div>
 </div>
+<script>
+ 
+    $('.tag-list li').click( function (d) {
+        const attr = $(this).attr('data-label')
+        $('.tag-list li').removeClass('active');
+        $(this).addClass('active');
+        filteList(attr);
+    })
+    function filteList (type) {
+        const allBook = $('.book-box')
+        if(type=== '全部') {
+            allBook.show();
+        }else {
+            allBook.each(function (){
+              const attr =   $(this).attr('data-tags')
+              const isShow = attr.toLowerCase().indexOf(type)!=-1
+              console.log(type,'attr',attr ,'isShow',isShow)
+              isShow ?  $(this).show():$(this).hide(); 
+            })
+        }
+    }
+</script>

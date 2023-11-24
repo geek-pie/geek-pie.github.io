@@ -87,11 +87,13 @@ description: "本章简短的描述内容"
 ## 本地预览
 ### Setup
 1. 安装
-
+    1)hugo 安装步骤参考：https://gohugo.io/installation/windows/
+    2)go 安装：https://go.dev/doc/install
+    安装完毕后需要重器编辑器
     ```sh
     # Install NPM dependencies
     npm install
-    ```
+    hu```
 
 2. 本地运行hugo预览效果
 
